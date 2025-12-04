@@ -4,6 +4,6 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
  
-  base: '/f1-dashboard/', 
+  base: './f1-dashboard', 
   plugins: [react()],
 })

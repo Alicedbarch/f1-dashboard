@@ -6,6 +6,19 @@ import { circuits, teams, races, drivers, teams_stands, drivers_stands, race_det
 import RedBullCar from './assets/redbull.avif';
 
 
+import ReactDOM from 'react-dom/client';
+
+import { BrowserRouter } from 'react-router-dom'; 
+import App from './App'; 
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <BrowserRouter basename="/f1-dashboard">
+      <App />
+    </BrowserRouter>
+  </React.StrictMode>,
+);
+
 // --- HELPERS ---
 const timeToSeconds = (time: string): number => {
     const parts = time.split(':');
