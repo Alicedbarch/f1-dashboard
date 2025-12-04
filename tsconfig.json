@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "lib": ["DOM", "ES2020"],
+    "jsx": "react-jsx",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "baseUrl": "./src",
+    "paths": {
+      // ✅ MODIFICA: Questo alias ti permette di scrivere 
+      //    'import { ... } from "@types/data";' per importare 'src/types/data.ts'
+      //    o 'import { ... } from "@types";' per importare il file 'src/types.ts'.
+      //    Dipende da come chiami il file.
+      //
+      // *Se il tuo file è chiamato ESATTAMENTE 'src/types.ts', usa questa:
+      // "@types": ["./types"] 
+      
+      // *MA per la tua configurazione originale, useremo questa per permettere 
+      //  riferimenti a cartelle sotto types.
+      "@types/*": ["./types/*"] 
+    }
+  },
+  "include": [
+    "src", 
+    "./**/*.ts", 
+    "./**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules", 
+    "dist"
+  ]
+}
